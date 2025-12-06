@@ -47,7 +47,10 @@ const Table = ({ title, data, columns }) => {
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-700"
                   >
                     {/* Access nested values using the accessor key */}
-                    {row[column.accessor]}
+                    {column.render 
+                        ? column.render(row) // If 'render' exists, use the custom function, passing the entire row object
+                        : row[column.accessor] // Otherwise, display the data directly using the 'accessor' key
+                    }
                   </td>
                 ))}
               </tr>

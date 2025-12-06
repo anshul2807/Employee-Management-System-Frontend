@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import authService from "../../api/authService";
-import { FaUserCircle, FaEnvelope, FaBuilding, FaLock, FaUserShield } from 'react-icons/fa'; 
+import { FaUserCircle, FaEnvelope, FaBuilding} from 'react-icons/fa'; 
 import LoadingSpinner from '../../components/common/LoadingSpinner';
 
 const Profile = () => {

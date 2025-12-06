@@ -1,8 +1,8 @@
 import UnderDevelopment from '../../components/common/UnderDevelopment';
-const DepartmentManagement = () => {
+const Lookups = () => {
     return (
         <UnderDevelopment />
     );
 };
 
-export default DepartmentManagement;
+export default Lookups;

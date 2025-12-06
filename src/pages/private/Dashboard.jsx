@@ -1,9 +1,7 @@
+import UnderDevelopment from '../../components/common/UnderDevelopment';
 const Dashboard = () => {
     return (
-        <div>
-            <h1>Dashboard</h1>
-            <p>Welcome to the Dashboard!</p>
-        </div>
+        <UnderDevelopment />
     );
 };
 export default Dashboard;

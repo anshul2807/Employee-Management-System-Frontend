@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import authService from '../../api/authService';
 import { useAuth } from '../../context/AuthContext';
@@ -9,8 +9,13 @@ const Login = () => {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
 
-  const {getEmployee,login: loginContext} = useAuth();
+  const {getEmployee,login: loginContext,isAuthenticated} = useAuth();
   const navigate = useNavigate();
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/dashboard');
+    }
+  }, [isAuthenticated, navigate]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

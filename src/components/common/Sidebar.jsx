@@ -10,7 +10,8 @@ const Sidebar = () => {
     // ADMIN only routes
     { name: 'Employee List', path: '/employees', required: 'ADMIN' },
     { name: 'Lookups', path: '/lookups', required: 'ADMIN' },
-    {name:'List of Employees',path:'/manager-employees',required:'MANAGER' }
+    {name:'List of Employees',path:'/manager-employees',required:'MANAGER' },
+    {name:'Create Admin Users',path:'/create-admin-users',required:'ADMIN'}
   ];
   
   return (
