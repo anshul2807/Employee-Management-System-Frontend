@@ -48,7 +48,7 @@ export const AuthProvider = ({ children }) => {
 
   
   const login = (userData, userRoles) => {
-    
+    setEmployee(null);
     setIsAuthenticated(true);
     setUser(userData); 
     setRoles(userRoles); 
@@ -89,7 +89,7 @@ export const AuthProvider = ({ children }) => {
     login,
     logout,
     hasRole,
-    getEmployee
+    getEmployee,
   };
 
   return (
