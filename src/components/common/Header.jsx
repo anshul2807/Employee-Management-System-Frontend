@@ -1,30 +1,37 @@
-import { useAuth } from '../../context/AuthContext'; 
-import { Link } from 'react-router-dom';
+// Header.jsx
+import { useAuth } from "../../context/AuthContext";
 
-const Header = () => {
-  const { user, logout } = useAuth();
-  
+const Header = ({ toggleSidebar }) => {
+  const { logout } = useAuth();
+
   return (
-    <header className="flex items-center justify-between p-4 bg-white border-b border-gray-200 shadow-md">
-  
-      <Link to="/dashboard" className="text-xl font-bold text-indigo-600 hover:text-indigo-700 transition duration-150">
-        EMS Dashboard
-      </Link>
-      
-      <div className="flex items-center space-x-4">
-   
-        <span className="text-gray-700 font-medium hidden sm:inline">
-          Welcome, {user?.username || 'User'}
-        </span>
-        
-  
-        <button
-          onClick={logout}
-          className="px-3 py-1 bg-red-500 text-white text-sm rounded-md hover:bg-red-600 transition duration-150 shadow-sm"
+    <header className="bg-white shadow px-4 py-3 flex items-center justify-between">
+      {/* Mobile Menu Button */}
+      <button 
+        className="md:hidden p-2 rounded hover:bg-gray-200"
+        onClick={toggleSidebar}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="w-7 h-7"
         >
-          Logout
-        </button>
-      </div>
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            d="M3.75 5.25h16.5m-16.5 6h16.5m-16.5 6h16.5"
+          />
+        </svg>
+      </button>
+
+      <h1 className="text-xl font-semibold">EMS Dashboard</h1>
+
+      <button onClick={logout} className="text-red-500 font-semibold">
+        Logout
+      </button>
     </header>
   );
 };
