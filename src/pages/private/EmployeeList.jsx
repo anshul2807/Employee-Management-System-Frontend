@@ -105,7 +105,7 @@ const EmployeeList = () => {
                     disabled={!isDeleting.status && isDeleting.id===row.userId ? true : false}
                     className="px-3 py-1 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700 transition duration-150 disabled:bg-red-300"
                 >
-                    {isDeleting.status && isDeleting.id==row.userId ? 'Deleting...' : 'Delete'}
+                    {isDeleting.status && isDeleting.id==row.userId ? 'Terminating...' : 'Terminate'}
                 </button>
             )
         }
