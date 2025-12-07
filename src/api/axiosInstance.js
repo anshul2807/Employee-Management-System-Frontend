@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:8080'; 
-
+// const BASE_URL = 'http://localhost:8080'; 
+const BASE_URL = 'https://floating-chamber-86262-8288901086e3.herokuapp.com';
 
 const axiosInstance = axios.create({
   baseURL: BASE_URL,
