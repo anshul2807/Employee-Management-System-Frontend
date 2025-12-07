@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { useAuth } from './context/AuthContext';
 import AppRouter from './routes/AppRouter';
 import Header from './components/common/Header';
@@ -30,9 +30,9 @@ const App = () => {
   );
 
   return (
-    <Router>
+    <HashRouter>
           {layout}
-    </Router>
+    </HashRouter>
   );
 };
 
