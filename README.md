@@ -104,3 +104,10 @@ This project uses **Vite** and **`gh-pages`** for deployment to GitHub Pages.
 npm run deploy
 ```
 
+**For Testing**
+Admin Credentials 
+
+```
+username : test1
+password : test_1234
+```
