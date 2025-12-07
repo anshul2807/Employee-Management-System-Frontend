@@ -3,7 +3,6 @@ import LoginPage from '../pages/public/Login';
 import Dashboard from '../pages/private/Dashboard';
 import ProfilePage from '../pages/private/Profile';
 import EmployeeListPage from '../pages/private/EmployeeList';
-// import LookupsPage from '../pages/private/Lookups';
 import NotFoundPage from '../pages/public/NotFound';
 import RoleGuard from '../context/RoleGuard';
 import { useAuth } from '../context/AuthContext';
@@ -11,7 +10,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import { Navigate } from 'react-router-dom';
 import Lookups from '../pages/private/Lookups';
 import CreateAdminUsers from '../pages/private/CreateAdminUsers';
-
+import RegisterEmployee from '../pages/private/RegisterEmployee';
 
 const InitialRedirect = () => {
     const { isAuthenticated, loading } = useAuth();
@@ -46,6 +45,11 @@ const AppRouter = () => {
             <Route path="/lookups" element={
                 <RoleGuard requiredRole="ADMIN">
                     <Lookups />
+                </RoleGuard>
+            } />
+            <Route path="/register-employee" element={
+                <RoleGuard requiredRole="ADMIN">
+                    <RegisterEmployee />
                 </RoleGuard>
             } />
 

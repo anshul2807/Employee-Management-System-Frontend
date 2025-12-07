@@ -11,7 +11,9 @@ const Sidebar = () => {
     { name: 'Employee List', path: '/employees', required: 'ADMIN' },
     { name: 'Lookups', path: '/lookups', required: 'ADMIN' },
     {name:'List of Employees',path:'/manager-employees',required:'MANAGER' },
-    {name:'Create Admin Users',path:'/create-admin-users',required:'ADMIN'}
+    {name:'Create Admin Users',path:'/create-admin-users',required:'ADMIN'},
+    {name:'Register Employee',path:'/register-employee',required:'ADMIN'},
+    
   ];
   
   return (
