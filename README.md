@@ -111,3 +111,8 @@ Admin Credentials
 username : test1
 password : test_1234
 ```
+
+**Also you can see logs of all the request made to the backend**
+```
+https://floating-chamber-86262-8288901086e3.herokuapp.com/logs
+```
